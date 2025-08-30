@@ -81,11 +81,11 @@ class MessageFactory extends Factory
                 'sender_type' => 'agent',
                 'sender_name' => $agent->name,
                 'message' => fake()->randomElement([
-                    'مرحباً! كيف يمكنني مساعدتك اليوم؟',
-                    'شكراً لتواصلك معنا، سأساعدك في حل مشكلتك',
-                    'هل يمكنك توضيح المشكلة أكثر؟',
-                    'تم حل مشكلتك بنجاح',
-                    'هل تحتاج أي مساعدة إضافية؟'
+                    'Hello! How can I help you today?',
+                    'Thank you for contacting us. I will help you resolve your issue.',
+                    'Can you please explain the issue further?',
+                    'Your issue has been resolved successfully.',
+                    'Do you need any further assistance?'
                 ]),
             ];
         });

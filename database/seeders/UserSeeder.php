@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
 
         // Create support agents
         User::factory()->create([
-            'name' => 'سارة أحمد',
+            'name' => 'Sarah Ahmed',
             'email' => 'sara@highleveltech.com',
             'password' => Hash::make('password'),
             'role' => 'agent',
@@ -35,7 +35,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::factory()->create([
-            'name' => 'محمد علي',
+            'name' => 'Muhammad Ali',
             'email' => 'mohamed@highleveltech.com',
             'password' => Hash::make('password'),
             'role' => 'agent',
@@ -44,7 +44,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::factory()->create([
-            'name' => 'فاطمة حسن',
+            'name' => 'Fatima Hassan',
             'email' => 'fatima@highleveltech.com',
             'password' => Hash::make('password'),
             'role' => 'agent',
@@ -54,7 +54,7 @@ class UserSeeder extends Seeder
 
         // Create test customers
         User::factory()->create([
-            'name' => 'أحمد محمد',
+            'name' => 'Ahmed Mohammed',
             'email' => 'ahmed.customer@example.com',
             'password' => Hash::make('password'),
             'role' => 'user',
@@ -63,7 +63,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::factory()->create([
-            'name' => 'مريم خالد',
+            'name' => 'Maryam Khaled',
             'email' => 'mariam@example.com',
             'password' => Hash::make('password'),
             'role' => 'user',

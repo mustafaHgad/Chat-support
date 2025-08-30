@@ -99,14 +99,14 @@ class MessageSeeder extends Seeder
     private function getUserMessage(int $index): string
     {
         $messages = [
-            'مرحباً، أحتاج مساعدة في استخدام المنتج',
-            'أواجه مشكلة في تسجيل الدخول',
-            'كيف يمكنني تحديث بياناتي الشخصية؟',
-            'هل يمكنكم مساعدتي في إعداد الحساب؟',
-            'أريد معرفة المزيد عن الخدمات المتاحة',
-            'شكراً لكم على المساعدة السريعة',
-            'هل يمكن تفعيل هذه الميزة في حسابي؟',
-            'أحتاج إلى دعم تقني عاجل',
+            'Hello, I need help using the product.',
+            'I\'m having trouble logging in.',
+            'How can I update my personal information?',
+            'Can you help me set up my account?',
+            'I want to learn more about the available services.',
+            'Thank you for your prompt assistance.',
+            'Can I activate this feature on my account?',
+            'I need urgent technical support.'
         ];
 
         return $messages[$index % count($messages)];
@@ -114,15 +114,14 @@ class MessageSeeder extends Seeder
 
     private function getAgentMessage(int $index): string
     {
-        $messages = [
-            'مرحباً! كيف يمكنني مساعدتك اليوم؟',
-            'شكراً لتواصلك معنا، سأساعدك في حل هذه المشكلة',
-            'هل يمكنك توضيح المشكلة بتفصيل أكثر؟',
-            'تم حل المشكلة بنجاح، هل تحتاج أي مساعدة إضافية؟',
-            'سأقوم بتحويلك إلى القسم المختص',
-            'تم تحديث بياناتك بنجاح',
-            'هل هناك أي استفسارات أخرى؟',
-            'شكراً لك، نتمنى أن نكون قد ساعدناك',
+        $messages = ['Hello! How can I help you today?',
+            'Thank you for contacting us. I will help you resolve this issue.',
+            'Can you explain the issue in more detail?',
+            'The issue was resolved successfully. Do you need any further assistance?',
+            'I will transfer you to the appropriate department.',
+            'Your information was successfully updated.',
+            'Any further questions?',
+            'Thank you. We hope we have been helpful.',
         ];
 
         return $messages[$index % count($messages)];

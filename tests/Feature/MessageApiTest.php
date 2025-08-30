@@ -24,7 +24,7 @@ class MessageApiTest extends TestCase
             'chat_id' => $chat->id,
             'sender_type' => 'user',
             'sender_name' => $user->name,
-            'message' => 'مرحباً، أحتاج مساعدة في المنتج',
+            'message' => 'Hello, I need help with the product.',
             'message_type' => 'text'
         ];
 
@@ -49,13 +49,13 @@ class MessageApiTest extends TestCase
                 'success' => true,
                 'data' => [
                     'chat_id' => $chat->id,
-                    'message' => 'مرحباً، أحتاج مساعدة في المنتج'
+                    'message' => 'Hello, I need help with the product.'
                 ]
             ]);
 
         $this->assertDatabaseHas('messages', [
             'chat_id' => $chat->id,
-            'message' => 'مرحباً، أحتاج مساعدة في المنتج',
+            'message' => 'Hello, I need help with the product.',
             'sender_type' => 'user'
         ]);
     }
