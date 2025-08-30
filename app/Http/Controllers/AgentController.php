@@ -25,7 +25,6 @@ class AgentController extends Controller
     {
         try {
             $chats = $this->chatService->getWaitingChats();
-
             return response()->json([
                 'success' => true,
                 'data' => ChatResource::collection($chats),

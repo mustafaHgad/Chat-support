@@ -22,10 +22,14 @@ class StartChatRequest extends FormRequest
      */
     public function rules(): array
     {
-        $rules = [];
+        //dd(request()->all());
+        $rules = [
+            //'as_guest' => 'required|boolean',
+        ];
 
         // If not authenticated, require guest info
-        if (!$this->user()) {
+
+        if (!$this->user('sanctum') ) {
             $rules['guest_name'] = 'required|string|max:255';
             $rules['guest_email'] = 'required|email|max:255';
         }

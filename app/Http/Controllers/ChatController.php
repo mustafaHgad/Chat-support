@@ -8,6 +8,7 @@ use App\Http\Requests\StartChatRequest;
 use App\Http\Resources\ChatResource;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
@@ -23,9 +24,10 @@ class ChatController extends Controller
     public function startChat(StartChatRequest $request)
     {
         try {
-            if ($request->user()) {
+            $user = $request->user('sanctum') ?? Auth::guard('sanctum')->user();
+            if ($user && !$request->boolean('as_guest')) {
                 // Logged-in user
-                $chat = $this->chatService->startChatForUser($request->user()->id);
+                $chat = $this->chatService->startChatForUser($user->id);
             } else {
                 // Guest user
                 $chat = $this->chatService->startChatForGuest(

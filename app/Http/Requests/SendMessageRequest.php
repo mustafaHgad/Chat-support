@@ -25,8 +25,8 @@ class SendMessageRequest extends FormRequest
         return [
             'chat_id' => 'required|integer|exists:chats,id',
             'message' => 'required|string',
-            'sender_type' => 'required|in:user,agent,guest',
-            'sender_name' => 'required|string|max:255',
+            'sender_type' => 'sometimes|in:user,agent,guest',
+            'sender_name' => 'sometimes|string|max:255',
             'message_type' => 'nullable|in:text,file,image'
         ];
     }
