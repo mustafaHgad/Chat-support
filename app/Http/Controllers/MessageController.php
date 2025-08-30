@@ -22,8 +22,8 @@ class MessageController extends Controller
             $messageData = [
                 'chat_id' => $request->chat_id,
                 'sender_id' => $request->user('sanctum') ? $request->user('sanctum')->id : null,
-                'sender_type' => $request->user('sanctum')->role ? $request->user('sanctum')->role : $request->sender_type,
-                'sender_name' => $request->user('sanctum')->name ? $request->user('sanctum')->name : $request->sender_name,
+                'sender_type' => $request->sender_type ? $request->sender_type : $request->user('sanctum')->role,
+                'sender_name' => $request->sender_name ? $request->sender_name : $request->user('sanctum')->name,
                 'message' => $request->message,
                 'message_type' => $request->message_type ?? 'text'
             ];
