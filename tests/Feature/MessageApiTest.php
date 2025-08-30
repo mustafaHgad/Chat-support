@@ -152,8 +152,8 @@ class MessageApiTest extends TestCase
         $response->assertStatus(422)
             ->assertJsonValidationErrors([
                 'chat_id',
-                //'sender_type',
-                //'sender_name',
+                'sender_type',
+                'sender_name',
                 'message'
             ]);
     }
