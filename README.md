@@ -54,8 +54,6 @@ cd Chat-support
 # Install PHP dependencies
 composer install
 
-# Install Node.js dependencies (if frontend included)
-npm install
 ```
 
 ### 3. Environment Configuration
