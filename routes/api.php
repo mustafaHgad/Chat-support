@@ -43,9 +43,9 @@ Route::prefix('agent')
 Route::prefix('user')->
     middleware('auth:sanctum')
     ->group(function () {
-    Route::get('/chats', [ChatController::class, 'getUserChats']);
+    //Route::get('/chats', [ChatController::class, 'getUserChats']);
     Route::get('/profile', [AuthController::class, 'user']);
-    Route::patch('/profile', [AuthController::class, 'updateProfile']);
+    //Route::patch('/profile', [AuthController::class, 'updateProfile']);
     });
 
 // Health Check Route

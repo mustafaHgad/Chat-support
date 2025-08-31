@@ -23,7 +23,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role'
+        'role',
+        'is_online'
     ];
 
     /**
@@ -48,4 +49,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function chats(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Chat::class, 'user_id');
+    }
+
+    public function agentChats(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Chat::class, 'agent_id');
+    }
+
+    public function messages(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Message::class, 'sender_id');
+    }
+
 }
