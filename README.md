@@ -255,7 +255,7 @@ curl -X POST http://localhost:8000/api/auth/register \
       "name": "Ahmed Mohammed",
       "email": "ahmed@example.com",
       "role": "user",
-      "created_at": "2025-01-15T10:30:00.000000Z"
+      "created_at": "2025-08-29T10:30:00.000000Z"
     },
     "token": "1|abc123def456ghi789..."
   },
@@ -285,7 +285,7 @@ curl -X POST http://localhost:8000/api/chat/start \
       "name": "New Guest",
       "email": "visitor@example.com"
     },
-    "created_at": "2025-01-15T10:30:00.000000Z"
+    "created_at": "2025-08-29T10:30:00.000000Z"
   },
   "message": "Chat session started successfully"
 }
@@ -319,7 +319,7 @@ curl -X POST http://localhost:8000/api/messages/send \
     "message": "Hello, I need help using the product.",
     "message_type": "text",
     "is_read": false,
-    "sent_at": "2025-01-15T10:35:00.000000Z"
+    "sent_at": "2025-08-29T10:35:00.000000Z"
   },
   "message": "Message sent successfully"
 }
@@ -354,7 +354,7 @@ curl -X GET http://localhost:8000/api/chat/chat_f47ac10b-58cc-4372-a567-0e02b2c3
           "type": "guest"
         },
         "message": "Hello, I need help.",
-        "sent_at": "2025-01-15T10:35:00.000000Z",
+        "sent_at": "2025-08-29T10:35:00.000000Z",
         "sent_at_human": "5 minutes ago"
       },
       {
@@ -364,7 +364,7 @@ curl -X GET http://localhost:8000/api/chat/chat_f47ac10b-58cc-4372-a567-0e02b2c3
           "type": "agent"
         },
         "message": "Welcome! How can I help you?",
-        "sent_at": "2025-01-15T10:37:00.000000Z",
+        "sent_at": "2025-08-29T10:37:00.000000Z",
         "sent_at_human": "3 minutes ago"
       }
     ]
@@ -797,7 +797,7 @@ php artisan view:clear
 
 ## 📝 Changelog
 
-### Version 1.0.0 (2025-01-15)
+### Version 1.0.0 (2025-08-29)
 - ✅ Initial release
 - ✅ Basic chat functionality
 - ✅ User and agent management
